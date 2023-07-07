@@ -13,5 +13,5 @@ UCLASS()
 class GAMEJAM1_API AGameJam1GameModeBase : public AGameModeBase
 {
 	GENERATED_BODY()
-	
+		AGameJam1GameModeBase();
 };
