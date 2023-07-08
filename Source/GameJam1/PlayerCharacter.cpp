@@ -49,7 +49,9 @@ void APlayerCharacter::MoveRight(float axis)
 
 void APlayerCharacter::MoveForward(float axis)
 {
-	FVector Forward = camera->GetActorRotation().Vector();
+	FVector Forward;
+	if (camera)
+		Forward = camera->GetActorRotation().Vector();
 	
 	FVector projectedForward = Forward.VectorPlaneProject(Forward, FVector(0, 0, 1));
 	FVector normalized = projectedForward.GetSafeNormal();
