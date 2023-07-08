@@ -31,4 +31,13 @@ public:
 
 	ACameraActor* camera;
 
+	void Attack();
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		float attackDistance = 200.f;
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		int attackDamage = 1;
+	UPROPERTY(EditAnywhere, Category = "Attack")
+		float knockbackStrength = 1000.f;
+	FHitResult attackHitResult;
+
 };
